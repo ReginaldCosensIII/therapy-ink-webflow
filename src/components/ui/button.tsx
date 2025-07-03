@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-gradient-primary text-white border border-tattoo-red/20 hover:shadow-glow transition-all duration-300 hover:scale-105 font-semibold",
+        tattoo: "bg-tattoo-red text-white hover:bg-tattoo-gold hover:text-tattoo-black transition-all duration-300 shadow-lg hover:shadow-glow",
+        gold: "bg-tattoo-gold text-tattoo-black hover:bg-tattoo-red hover:text-white transition-all duration-300 font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",
