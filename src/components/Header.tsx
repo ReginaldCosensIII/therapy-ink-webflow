@@ -6,11 +6,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Home", href: "#home" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Artist", href: "#artist" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "Portfolio", href: "/#portfolio" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "Artist", href: "/#artist" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -41,9 +41,9 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Book Now
-            </Button>
+            <a href="/contact?subject=booking">
+              <Button variant="hero" size="sm">Book Now</Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -74,9 +74,9 @@ const Header = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <Button variant="hero" size="sm" className="w-full">
-                Book Now
-              </Button>
+              <a href="/contact?subject=booking" className="block">
+                <Button variant="hero" size="sm" className="w-full">Book Now</Button>
+              </a>
             </div>
           </div>
         </div>
