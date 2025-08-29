@@ -130,7 +130,7 @@ const SocialMedia = () => {
             </Button>
             <Button variant="outline" size="sm" className="gap-2">
               <Facebook className="w-4 h-4" />
-              Tattoo Therapy
+              <span className="font-brand">Tattoo Therapy</span>
               <ExternalLink className="w-3 h-3" />
             </Button>
           </div>

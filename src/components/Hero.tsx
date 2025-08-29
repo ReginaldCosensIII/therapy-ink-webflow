@@ -26,7 +26,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-primary bg-clip-text text-transparent font-brand">
               Tattoo Therapy
             </span>
             <br />

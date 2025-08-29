@@ -59,7 +59,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3"><span className="bg-gradient-primary bg-clip-text text-transparent">Contact Tattoo Therapy</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3"><span className="bg-gradient-primary bg-clip-text text-transparent font-brand">Contact Tattoo Therapy</span></h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">Book an appointment, request a consultation, or ask a question. We're here to help.</p>
         </header>
 

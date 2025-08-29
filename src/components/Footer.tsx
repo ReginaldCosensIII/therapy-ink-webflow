@@ -9,7 +9,7 @@ const Footer = () => {
           
           {/* Brand & Description */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
+            <h3 className="text-2xl font-brand font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
               Tattoo Therapy
             </h3>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
