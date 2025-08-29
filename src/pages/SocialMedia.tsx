@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Heart, MessageCircle, Share2, Play, Instagram, Facebook, Twitter, ExternalLink } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Mock data for social media content
 const mockTikTokVideos = [
@@ -97,8 +99,10 @@ const SocialMedia = () => {
   const [activeTab, setActiveTab] = useState("all");
 
   return (
-    <div className="min-h-screen bg-background pt-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main className="pt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -388,7 +392,9 @@ const SocialMedia = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 };
