@@ -10,7 +10,7 @@ const Header = () => {
     { name: "Portfolio", href: "/#portfolio" },
     { name: "Testimonials", href: "/#testimonials" },
     { name: "Artist", href: "/#artist" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -41,7 +41,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="/contact?subject=booking">
+            <a href="#contact">
               <Button variant="hero" size="sm">Book Now</Button>
             </a>
           </div>
@@ -74,7 +74,7 @@ const Header = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <a href="/contact?subject=booking" className="block">
+              <a href="#contact" className="block">
                 <Button variant="hero" size="sm" className="w-full">Book Now</Button>
               </a>
             </div>

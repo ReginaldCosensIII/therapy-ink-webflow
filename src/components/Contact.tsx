@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -15,33 +14,17 @@ const SUBJECT_OPTIONS = [
 ];
 
 const Contact = () => {
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
-
-  const preselected = useMemo(() => searchParams.get("subject") ?? "", [searchParams]);
 
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: preselected || "general",
+    subject: "general",
     message: "",
   });
 
-  useEffect(() => {
-    document.title = "Contact Tattoo Therapy | Book an Appointment";
-    const meta = document.querySelector('meta[name="description"]');
-    const content = "Contact Tattoo Therapy to book an appointment, request a consultation, or ask a question.";
-    if (meta) meta.setAttribute("content", content);
-    else {
-      const m = document.createElement("meta");
-      m.name = "description";
-      m.content = content;
-      document.head.appendChild(m);
-    }
-  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -64,8 +47,7 @@ const Contact = () => {
         title: "Message sent",
         description: "Thanks! We'll get back to you shortly. For urgent bookings, please call us.",
       });
-      setForm({ name: "", email: "", phone: "", subject: preselected || "general", message: "" });
-      navigate("/", { replace: false });
+      setForm({ name: "", email: "", phone: "", subject: "general", message: "" });
     } catch (err: any) {
       toast({ title: "Something went wrong", description: err?.message ?? "Please try again later.", variant: "destructive" });
     } finally {
@@ -74,12 +56,11 @@ const Contact = () => {
   };
 
   return (
-    <main className="py-24 bg-background">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-10 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3"><span className="bg-gradient-primary bg-clip-text text-transparent">Contact Tattoo Therapy</span></h1>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3"><span className="bg-gradient-primary bg-clip-text text-transparent">Contact Tattoo Therapy</span></h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">Book an appointment, request a consultation, or ask a question. We're here to help.</p>
-          <link rel="canonical" href={`${window.location.origin}/contact`} />
         </header>
 
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -115,7 +96,7 @@ const Contact = () => {
               </div>
               <div className="flex gap-3">
                 <Button type="submit" variant="hero" disabled={loading}>{loading ? "Sending..." : "Send Message"}</Button>
-                <Button type="button" variant="outline" onClick={() => setForm({ name: "", email: "", phone: "", subject: preselected || "general", message: "" })}>Clear</Button>
+                <Button type="button" variant="outline" onClick={() => setForm({ name: "", email: "", phone: "", subject: "general", message: "" })}>Clear</Button>
               </div>
             </form>
           </article>
@@ -132,7 +113,7 @@ const Contact = () => {
           </aside>
         </section>
       </div>
-    </main>
+    </section>
   );
 };
 
