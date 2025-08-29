@@ -16,6 +16,8 @@ const Index = () => {
         <Testimonials />
         <ArtistShowcase />
         <Contact />
+        {/* Divider between Contact and Footer */}
+        <div className="border-t border-tattoo-gray"></div>
       </main>
       <Footer />
     </div>

@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -98,6 +99,24 @@ const Testimonials = () => {
           <div>
             <div className="text-3xl font-bold text-tattoo-gold mb-2">10+</div>
             <div className="text-muted-foreground">Years Experience</div>
+          </div>
+        </div>
+
+        {/* CTA to Social Media */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-dark rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              See More Client Love on Social Media
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Follow our journey and discover thousands of client stories, reviews, and real tattoo experiences shared across our social platforms.
+            </p>
+            <a href="/social-media">
+              <Button variant="hero" size="lg" className="gap-2">
+                <Instagram className="w-5 h-5" />
+                View Social Media Hub
+              </Button>
+            </a>
           </div>
         </div>
       </div>
